@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Performance Analytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Team Performance Analytics</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/kanban">Kanban Board</a>
+            <a href="/gantt">Gantt Chart</a>
+            <a href="/team-performance">Team Performance</a>
+            <a href="/onboarding">Onboarding</a>
+        </nav>
+    </header>
+
+    <!-- Team Performance Table -->
+    <section>
+        <h2>Team Performance</h2>
+        <table>
+            <tr>
+                <th>Team Member</th>
+                <th>Tasks Completed</th>
+                <th>Total Time Spent</th>
+            </tr>
+            {% for member in team_members %}
+            <tr>
+                <td>{{ member.name }}</td>
+                <td>{{ member.tasks_completed }}</td>
+                
+                {% set total_time = 0 %}
+                {% for performance in task_performance %}
+                    {% if performance.assigned_to == member.name %}
+                        {% set total_time = performance.total_time %}
+                    {% endif %}
+                {% endfor %}
+                
+                <td>{{ total_time }} hours</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>
+
+    <!-- Footer Section (Fixed at the bottom) -->
+    <footer>
+        <p>&copy; 2025 Tech Innovations Ltd.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gantt Chart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Chart.js for Gantt Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Gantt Chart for Project Timeline</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/kanban">Kanban Board</a>
+        </nav>
+    </header>
+
+    <section id="gantt-chart">
+        <!-- Define a fixed canvas size to make sure it renders properly -->
+        <canvas id="ganttChartCanvas" width="800" height="400"></canvas>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tech Innovations Ltd.</p>
+    </footer>
+
+    <!-- Link to your gantt.js file -->
+    <script src="{{ url_for('static', filename='js/gantt.js') }}"></script>
+</body>
+</html>

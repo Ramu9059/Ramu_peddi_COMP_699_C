@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Kanban Board</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/gantt">Gantt Chart</a>
+            <a href="/team-performance">Team Performance</a>
+            <a href="/onboarding">Onboarding</a>
+        </nav>
+    </header>
+
+    <section id="kanban">
+        <!-- Kanban board will be dynamically generated here by kanban.js -->
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tech Innovations Ltd.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/kanban.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+/* Header Styles */
+header {
+    background-color: #80012b;  /* Green */
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styles (Content) */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Ensures content section grows and pushes footer down */
+}
+
+/* Start Now Button Style */
+.start-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d8089a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #f03e1e;
+}
+
+/* Footer Styles - Fixed to the bottom */
+footer {
+    background-color: #333;  /* Dark gray */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;  /* Make the footer fixed */
+    bottom: 0;        /* Position it at the bottom */
+    left: 0;
+    right: 0;
+    width: 100%;
+    font-size: 1em;
+}
+
+/* Table Styles for Projects, Tasks, and Team Members */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #da4b08; /* Green */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light grey background for even rows */
+}
+
+tr:hover {
+    background-color: #ddd; /* Darker grey on hover */
+}
+
+table, th, td {
+    border: 1px solid #ddd; /* Light border for the tables */
+}
+
+/* Task Details Section */
+h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-top: 30px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Comment Section Styles */
+ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form textarea {
+    padding: 15px;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: vertical;
+    min-height: 150px;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+    outline: none;
+}
+
+form button {
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+form button:active {
+    background-color: #388e3c;
+}
+
+
+/* Onboarding Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+/* Onboarding Page Specific Styles */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer Styling for Onboarding Page */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: sticky; /* Makes it stick to the bottom but doesn't overlap content */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    font-size: 1em;
+}
+
+
+/* Team Performance Page Styling */
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #dd5a03;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Kanban Board Columns */
+.kanban-column {
+    width: 30%;
+    margin: 0 10px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kanban-column h3 {
+    text-align: center;
+    font-size: 1.2em;
+    color: #bd0981;
+}
+
+/* Task Card Styles */
+.task-card {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.priority {
+    color: #ff5722;
+}
+
+/* Progress Bar */
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 8px;
+    height: 5px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.progress-bar div {
+    background-color: #4CAF50;
+    height: 100%;
+    border-radius: 8px;
+}
+/* Task Card Hover Effect */
+.task-card {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* On Hover, Increase Size & Add Shadow */
+.task-card:hover {
+    transform: scale(1.05);  /* Increase the size slightly */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Add more shadow on hover */
+}

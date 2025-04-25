@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Project Management Dashboard</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/kanban">Kanban Board</a>
+            <a href="/gantt">Gantt Chart</a>
+            <a href="/team-performance">Team Performance</a>  <!-- Link to the performance page -->
+            <a href="/onboarding">Onboarding</a>  <!-- Link to onboarding page -->
+        </nav>
+    </header>
+
+    <!-- Display Projects -->
+    <section>
+        <h2>Projects</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Project ID</th>
+                    <th>Project Name</th>
+                    <th>Description</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for project in projects %}
+                <tr>
+                    <td>{{ project.id }}</td>
+                    <td>{{ project.name }}</td>
+                    <td>{{ project.description }}</td>
+                    <td>{{ project.start_date }}</td>
+                    <td>{{ project.end_date }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Display Tasks -->
+    <section>
+        <h2>Tasks</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Task ID</th>
+                    <th>Task Name</th>
+                    <th>Status</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Assigned To</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in tasks %}
+                <tr>
+                    <td>{{ task.id }}</td>
+                    <td>{{ task.name }}</td>
+                    <td>{{ task.status }}</td>
+                    <td>{{ task.start_date }}</td>
+                    <td>{{ task.end_date }}</td>
+                    <td>{{ task.assigned_to }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Display Team Members -->
+    <section>
+        <h2>Team Members</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Member ID</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for member in team_members %}
+                <tr>
+                    <td>{{ member.id }}</td>
+                    <td>{{ member.name }}</td>
+                    <td>{{ member.role }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Display Tasks -->
+<section>
+    <h2>Tasks</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Task ID</th>
+                <th>Task Name</th>
+                <th>Status</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Assigned To</th>
+                <th>Details</th>  <!-- Add a Details column -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in tasks %}
+            <tr>
+                <td>{{ task.id }}</td>
+                <td>{{ task.name }}</td>
+                <td>{{ task.status }}</td>
+                <td>{{ task.start_date }}</td>
+                <td>{{ task.end_date }}</td>
+                <td>{{ task.assigned_to }}</td>
+                <!-- Link to Task Detail Page -->
+                <td><a href="{{ url_for('task_detail', task_id=task.id) }}">View Details</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+
+    <footer>
+        <p>&copy; 2025 Tech Innovations Ltd.</p>
+    </footer>
+</body>
+</html>
